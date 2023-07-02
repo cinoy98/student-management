@@ -1,0 +1,22 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Management System</h1>
+      <div class="navigation">
+        <a href="/" >Register</a>
+        <a href="{{ url_for('retrieve_student') }}">Retrieve</a>
+        <a href="{{ url_for('search_students') }}">Search</a>
+        <a href="{{ url_for('generate_report') }}">Report</a>
+      </div>
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
